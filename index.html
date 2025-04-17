@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CIE Search</title>
+</head>
+<body>
+    <form id="cieSearch">
+        <h1 style="margin-bottom: 2%;">CIE Search</h1>
+        <p style="margin-top: 0px;"><b>Created by <a href="ultraspatial.neocities.org">ultra.</a></b></a></p>
+        <h2>Enter the Details of the Paper</h2>
+
+        <!-- Subject Field -->
+        <label for="subject">Subject:</label>
+        <input
+            type="number"
+            id="subject"
+            name="subject"
+            placeholder="Enter subject code (4 digits)"
+            minlength="4"
+            maxlength="4"
+            required
+            oninput="this.value = this.value.slice(0, 4)"
+        ><br>
+
+        <!-- Year Field -->
+        <label for="year">Year:</label>
+        <input
+            type="number"
+            id="year"
+            name="year"
+            placeholder="Enter year (4 digits)"
+            minlength="4"
+            maxlength="4"
+            required
+            oninput="this.value = this.value.slice(0, 4)"
+        ><br>
+
+        <!-- Session Field -->
+        <label for="session">Session:</label>
+        <select id="session" name="session" required>
+            <option value="" disabled selected>Select a session</option>
+            <option value="MJ">May-June</option>
+            <option value="ON">October-November</option>
+            <option value="FM">February-March</option>
+        </select><br>
+
+        <!-- Variant Field -->
+        <label for="variant">Variant:</label>
+        <input
+            type="number"
+            id="variant"
+            name="variant"
+            placeholder="Enter variant (2 digits)"
+            minlength="2"
+            maxlength="2"
+            required
+            oninput="this.value = this.value.slice(0, 2)"
+        ><br>
+
+        <!-- Document Type Field -->
+        <label for="docType">Type of Document:</label>
+        <select name="docType" id="docType" required>
+            <option value="" disabled selected>Select a document type</option>
+            <option value="qp">Question Paper</option>
+            <option value="ms">Mark Scheme</option>
+        </select>
+
+        <!-- Submit Button -->
+        <button type="submit" id="paper">Open Paper</button>
+        <button type="submit" id="yt">Open Youtube</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
