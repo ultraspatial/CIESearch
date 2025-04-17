@@ -26,8 +26,6 @@ form.addEventListener('paper', function(event) {
 
     window.open(url, '_blank');
 
-    // Reset the form after submission
-    form.reset();
 });
 
 
@@ -55,7 +53,11 @@ document.getElementById('yt').addEventListener('click', function(event) {
     const yturl = 'https://www.youtube.com/results?search_query=' + subject + '/' + variant + '/' + sessioncode + '/' +  year.slice(-2)
 
     window.open(yturl, '_blank');
+});
 
+document.getElementById('reset').addEventListener('click', function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
     // Reset the form after submission
     form.reset();
 });

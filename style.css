@@ -29,3 +29,9 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+button.reset {
+    background-color: #FF0000;
+}
+button.reset:hover {
+    background-color: #cc0000;
+}
