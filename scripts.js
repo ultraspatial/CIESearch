@@ -1,7 +1,25 @@
+// Set the target date (e.g., New Year's Day 2024)
+const targetDate = new Date("May 9, 2025 00:00:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const timeRemaining = targetDate - now;
+
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  // Update the DOM
+  document.getElementById("days").textContent = String(days).padStart(2, "0");
+}
+
+// Update the countdown every second
+setInterval(updateCountdown, 1000);
+
+// Initial call to avoid delay on first render
+updateCountdown();
+
 // Select the form element
 const form = document.getElementById('cieSearch');
-
-form.addEventListener('paper', function(event) {
+document.getElementById('paper').addEventListener('click', function(event) {
     // Prevent the default form submission behavior
     event.preventDefault();
 
@@ -55,7 +73,7 @@ document.getElementById('yt').addEventListener('click', function(event) {
     window.open(yturl, '_blank');
 });
 
-document.getElementById('reset').addEventListener('click', function(event) {
+document.getElementById('resetForm').addEventListener('click', function(event) {
     // Prevent the default form submission behavior
     event.preventDefault();
     // Reset the form after submission

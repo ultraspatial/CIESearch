@@ -1,7 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap');
+
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: "Radio Canada", serif;
+    font-weight: 300;
+    background-color: #11111b;
+    color: #cdd6f4;
 }
+h1,h2,label {
+    color: #ccd5f3;
+    font-weight: inherit;
+}
+a {
+    color: #89b4fa;
+    text-decoration: none;
+}
+
+#cieSearch {
+  padding-top: 20px;
+}
+
 form {
     max-width: 500px;
     margin: 0 auto;
@@ -9,29 +27,74 @@ form {
 label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
 }
 input, select {
+    background-color: #cdd6f4;
+    font-family: inherit;
+    color: #1e1e2e;
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 4px;
+}
+option {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    font-family: inherit;
 }
 button {
     padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #89b4fa;
+    color: #1e1e2e;
+    font-family: inherit;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 button:hover {
-    background-color: #0056b3;
+    background-color: #89dceb;
 }
-button.reset {
-    background-color: #FF0000;
+button.resetForm {
+    background-color: #eba0ac;
 }
-button.reset:hover {
-    background-color: #cc0000;
+button.resetForm:hover {
+    background-color: #f38ba8;
 }
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #181825;
+}
+header h2 {
+    color:#f38ba8;
+  }
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .time span {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #cdd6f4;
+    color: #282c34;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+
+  .time p {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
